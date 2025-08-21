@@ -1,5 +1,6 @@
 import { GalleryVerticalEnd } from "lucide-react"
-import { SignupForm } from "@/components/signup-form"
+import { SignupForm } from "./signup-form"
+
 
 
 function Signup() {
