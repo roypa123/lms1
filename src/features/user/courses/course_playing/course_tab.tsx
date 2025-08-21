@@ -20,11 +20,11 @@ import {
 
 export function CourseTab() {
   return (
-    <div className="flex w-full flex-col gap-6 ">
+    <div className="flex w-full flex-col gap-6 mt-5 ">
       <Tabs defaultValue="account">
         <TabsList  >
-          <TabsTrigger value="courseoverview">Course OverView</TabsTrigger>
-          <TabsTrigger value="sectionDetails">Section Details</TabsTrigger>
+          <TabsTrigger value="courseoverview" className="text-lg">Course OverView</TabsTrigger>
+          <TabsTrigger value="sectionDetails" className="text-lg">Section Details</TabsTrigger>
         </TabsList>
         <TabsContent value="courseoverview">
           <Card >

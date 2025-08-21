@@ -38,7 +38,7 @@ export function NavMain1({
             className="group/collapsible"
           >
             <SidebarMenuItem>
-                <SidebarMenuButton tooltip={item.title}>
+                <SidebarMenuButton className="text-lg" tooltip={item.title}>
                   {item.icon && <item.icon />}
                   <span>{item.title}</span>   
                 </SidebarMenuButton>

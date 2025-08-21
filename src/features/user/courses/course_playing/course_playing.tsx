@@ -1,7 +1,8 @@
 
 import { CourseTab } from "./course_tab"
-import YouTube, { type YouTubeProps } from "react-youtube"
+
 import { TopicSections } from "./topic_sections"
+import ReactPlayer from "react-player"
 
 const data = {
   navMain: [
@@ -90,6 +91,144 @@ const data = {
         },
       ],
     },
+     {
+      title: "Settings",
+      url: "#",
+      icon: "",
+      items: [
+        {
+          title: "General",
+          url: "#",
+        },
+        {
+          title: "Team",
+          url: "#",
+        },
+        {
+          title: "Billing",
+          url: "#",
+        },
+        {
+          title: "Limits",
+          url: "#",
+        },
+      ],
+    },
+     {
+      title: "Settings",
+      url: "#",
+      icon: "",
+      items: [
+        {
+          title: "General",
+          url: "#",
+        },
+        {
+          title: "Team",
+          url: "#",
+        },
+        {
+          title: "Billing",
+          url: "#",
+        },
+        {
+          title: "Limits",
+          url: "#",
+        },
+      ],
+    },
+     {
+      title: "Settings",
+      url: "#",
+      icon: "",
+      items: [
+        {
+          title: "General",
+          url: "#",
+        },
+        {
+          title: "Team",
+          url: "#",
+        },
+        {
+          title: "Billing",
+          url: "#",
+        },
+        {
+          title: "Limits",
+          url: "#",
+        },
+      ],
+    },
+     {
+      title: "Settings",
+      url: "#",
+      icon: "",
+      items: [
+        {
+          title: "General",
+          url: "#",
+        },
+        {
+          title: "Team",
+          url: "#",
+        },
+        {
+          title: "Billing",
+          url: "#",
+        },
+        {
+          title: "Limits",
+          url: "#",
+        },
+      ],
+    },
+     {
+      title: "Settings",
+      url: "#",
+      icon: "",
+      items: [
+        {
+          title: "General",
+          url: "#",
+        },
+        {
+          title: "Team",
+          url: "#",
+        },
+        {
+          title: "Billing",
+          url: "#",
+        },
+        {
+          title: "Limits",
+          url: "#",
+        },
+      ],
+    },
+     {
+      title: "Settings",
+      url: "#",
+      icon: "",
+      items: [
+        {
+          title: "General",
+          url: "#",
+        },
+        {
+          title: "Team",
+          url: "#",
+        },
+        {
+          title: "Billing",
+          url: "#",
+        },
+        {
+          title: "Limits",
+          url: "#",
+        },
+      ],
+    },
   ],
   
 }
@@ -97,56 +236,33 @@ const data = {
 
 function CoursePlaying() {
 
-  const onReady: YouTubeProps["onReady"] = (event) => {
-    console.log("Player ready!",event)
-    // event.target.playVideo() // you can control playback
-  }
-
-  const onPlay: YouTubeProps["onPlay"] = () => {
-    console.log("Video playing...")
-  }
-
-  // const opts: YouTubeProps["opts"] = {
-  //   height: "390",
-  //   width: "640",
-  //   playerVars: {
-  //     autoplay: 0,
-  //     controls: 1,
-  //     modestbranding: 1,
-  //     rel: 0,
-  //   },
-  // }
   
   return (
-   <div className="flex flex-row w-full h-full">
-      <div className="flex-5 flex flex-col justify-between mx-5"  >
-        <div>1. Angular Beginner</div>
-        <div className="w-full aspect-[21/9] ">
-           <YouTube
-             videoId="dQw4w9WgXcQ"
-             iframeClassName="aspect-[21/9]"
-             opts={
-               {
-              height: "100%",
-              width: "100%",
-             playerVars: {
-                autoplay: 0,
-                controls: 1,
-                modestbranding: 1,
-                rel: 0,
-             },
-            }  
-          }
-          onReady={onReady}
-          onPlay={onPlay}
-          />
-        </div>
+   <div className="flex flex-row w-full h-full ">
+      <div className="flex-4 flex flex-col mx-5"  >
+        <div className="text-xl mb-5">1. Angular Beginner</div>
+       
+        <div className="relative w-full aspect-video bg-black">
+      <ReactPlayer
+         slot="media"
+        src="https://stream.mux.com/maVbJv2GSYNRgS02kPXOOGdJMWGU1mkA019ZUjYE7VU7k"
+        controls={false}
+        style={{
+          width: "100%",
+          height: "100%",
+          
+        }}  
+      />
+
+    
+     
+    </div>
         <CourseTab />
       </div>
 
       {/*---------*/}
-      <div className="flex-2 bg-blue-100 h-full">
-        {/* <TopicSections items={data.navMain}/> */}
+      <div className="flex-2  h-full border-l-1 border-grey-500 px-2">
+        <TopicSections items={data.navMain}/>
       </div>
 
    </div>
