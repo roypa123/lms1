@@ -1,19 +1,12 @@
 import * as React from "react"
 import {
-  BookOpen,
-  Bot,
-  Frame,
+  Library,
   GalleryVerticalEnd,
-  Map,
-  PieChart,
   Settings2,
   SquareTerminal,
+  Calendar,
+  LibraryBig
 } from "lucide-react"
-
-import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
-import { NavUser } from "@/components/nav-user"
-
 import {
   Sidebar,
   SidebarContent,
@@ -22,6 +15,8 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 import { TeamSwitcher1 } from "./team-switcher1"
+import { NavUser1 } from "./nav-user1"
+import { NavMain1 } from "./nav-main1"
 
 // This is sample data.
 const data = {
@@ -39,108 +34,46 @@ const data = {
   ],
   navMain: [
     {
-      title: "Playground",
+      title: "Dashboard",
       url: "#",
       icon: SquareTerminal,
       isActive: true,
       items: [
-        {
-          title: "History",
-          url: "#",
-        },
-        {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
-          url: "#",
-        },
       ],
     },
     {
-      title: "Models",
+      title: "Courses",
       url: "#",
-      icon: Bot,
+      icon: LibraryBig,
       items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
+       
       ],
     },
     {
-      title: "Documentation",
+      title: "My Courses",
       url: "#",
-      icon: BookOpen,
+      icon: Library,
       items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
       ],
     },
     {
+      title: "Calender",
+      url: "#",
+      icon: Calendar,
+      items: [
+      
+      ],
+    },
+     {
       title: "Settings",
       url: "#",
       icon: Settings2,
       items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
+      
       ],
     },
   ],
-  projects: [
-    {
-      name: "Design Engineering",
-      url: "#",
-      icon: Frame,
-    },
-    {
-      name: "Sales & Marketing",
-      url: "#",
-      icon: PieChart,
-    },
-    {
-      name: "Travel",
-      url: "#",
-      icon: Map,
-    },
-  ],
+
 }
 
 export function AppSidebar1({ ...props }: React.ComponentProps<typeof Sidebar>) {
@@ -150,11 +83,10 @@ export function AppSidebar1({ ...props }: React.ComponentProps<typeof Sidebar>) 
         <TeamSwitcher1 teams={data.teams} />
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
+        <NavMain1 items={data.navMain} />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        <NavUser1 user={data.user} />
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
