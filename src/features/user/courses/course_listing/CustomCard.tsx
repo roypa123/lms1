@@ -3,7 +3,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
@@ -15,35 +14,31 @@ import { Badge } from "@/components/ui/badge"
 export function CustomCard() {
   return (
     <Card className="w-full max-w-sm">
-      <CardHeader>
-        <AspectRatio ratio={16 / 9}>
+      <CardHeader className="w-[150px] h-[150px]">
+        <AspectRatio ratio={1 / 1}>
         <img src="" alt="" className="rounded-md object-cover" />
         </AspectRatio>
       </CardHeader>
       <CardContent>
-        <div>
-             <Avatar>
+        <div className="flex flex-row items-center">
+              <Avatar >
                 <AvatarImage src="https://github.com/shadcn.png" />
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
-              <CardTitle>Angular</CardTitle>
+              <CardTitle className="ml-2 my-2">Angular</CardTitle>
         </div>
-        <div>
-           <Badge variant="default">Default</Badge>
-           <Badge variant="secondary">Secondary</Badge>
-           <Badge variant="destructive">Error</Badge>
-           <Badge variant="outline">Outline</Badge>
+        <div className="flex flex-row my-2 flex-end">
+           <Badge className="mr-1" variant="default">Default</Badge>
+           <Badge className="mr-1" variant="secondary">Secondary</Badge>
+           <Badge className="mr-1" variant="destructive">Error</Badge>
+           <Badge className="mr-1" variant="outline">Outline</Badge>
         </div>
         
         <CardDescription>
-          Enter your email below to login to your account
+          Enter your email below to login to your account 
+         Enter your email below to login to your account 
         </CardDescription> 
       </CardContent>
-      <CardFooter className="flex-col gap-2">
-        <div>
-            sdssd
-        </div>
-      </CardFooter>
     </Card>
   )
 }

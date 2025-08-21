@@ -14,7 +14,9 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 import { AppSidebar1 } from "./main_layout_sections/app-sidebar1"
-import CourseListing from "./courses/course_listing/CourseListing"
+import CoursePlaying from "./courses/course_playing/course_playing"
+// import CourseListing from "./courses/course_listing/CourseListing"
+
 
 export default function MainUserLayout() {
   return (
@@ -52,7 +54,8 @@ export default function MainUserLayout() {
           </div>
           <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
         </div> */}
-        <CourseListing/>
+        {/* <CourseListing/> */}
+        <CoursePlaying/>
       </SidebarInset>
     </SidebarProvider>
   )
