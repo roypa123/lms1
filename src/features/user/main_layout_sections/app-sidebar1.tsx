@@ -27,9 +27,9 @@ const data = {
   },
   teams: [
     {
-      name: "Acme Inc",
+      name: "NLMS",
       logo: GalleryVerticalEnd,
-      plan: "Enterprise",
+      plan: "",
     },
   ],
   navMain: [
