@@ -57,3 +57,27 @@ export default function MainUserLayout() {
     </SidebarProvider>
   )
 }
+
+
+
+
+  <Routes>
+        <Route
+          path="/" 
+          element={<Login/>}
+        />
+
+        {/* <Route path="/auth">
+           <Route path="login" element={<Login/>}  />
+           <Route path="signup" element={<Signup/>}  />
+        </Route>
+
+        <Route path="/dsds">
+           <Route path="login" element={<Login/>}  />
+           <Route path="signup" element={<Signup/>}  />
+        </Route>
+
+        <Route path="/unauth-page" element={<UnauthPage />} />
+        <Route path="*" element={<NotFound />} /> */}
+ 
+      </Routes>   

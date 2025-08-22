@@ -14,7 +14,8 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 import { AppSidebar1 } from "./main_layout_sections/app-sidebar1"
-import CoursePlaying from "./courses/course_playing/course_playing"
+// import CoursePlaying from "./courses/course_playing/course_playing"
+import CreateCourse from "./courses/create_course/create_course"
 // import CourseListing from "./courses/course_listing/CourseListing"
 
 
@@ -46,7 +47,8 @@ export default function MainUserLayout() {
             </Breadcrumb>
           </div>
         </header>
-        <CoursePlaying/>
+        {/* <CoursePlaying/> */}
+        <CreateCourse/>
       </SidebarInset>
     </SidebarProvider>
   )
