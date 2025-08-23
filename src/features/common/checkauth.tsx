@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Navigate, Outlet, useLocation } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 
 type CheckAuthProps = {
   isAuthenticated: boolean;
@@ -7,7 +7,7 @@ type CheckAuthProps = {
   children?: ReactNode;
 };
 
-function CheckAuth({ isAuthenticated, user, children }: CheckAuthProps) {
+function CheckAuth({ isAuthenticated, user, children}: CheckAuthProps) {
   const location = useLocation();
 
   console.log(location.pathname, isAuthenticated);
@@ -19,20 +19,12 @@ function CheckAuth({ isAuthenticated, user, children }: CheckAuthProps) {
       if (user?.role === "admin") {
         return <Navigate to="/admin/dashboard" />;
       } else {
-        return <Navigate to="/shop/home" />;
+        return <Navigate to="/shop/dashboard" />;
       }
     }
   }
 
-  if (
-    !isAuthenticated &&
-    !(
-      location.pathname.includes("/login") ||
-      location.pathname.includes("/register")
-    )
-  ) {
-    return <Navigate to="/auth/login" />;
-  }
+
 
   if (
     isAuthenticated &&
@@ -42,7 +34,7 @@ function CheckAuth({ isAuthenticated, user, children }: CheckAuthProps) {
     if (user?.role === "admin") {
       return <Navigate to="/admin/dashboard" />;
     } else {
-      return <Navigate to="/shop/home" />;
+      return <Navigate to="/shop/dashboard" />;
     }
   }
 
@@ -62,8 +54,7 @@ function CheckAuth({ isAuthenticated, user, children }: CheckAuthProps) {
     return <Navigate to="/admin/dashboard" />;
   }
 
-  // return <>{children}</>;
-   return <Outlet />;
+  return <>{children}</>;
 }
 
 export default CheckAuth;
