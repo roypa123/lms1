@@ -9,9 +9,6 @@ import MainUserLayout from "./features/user/MainUserLayou";
 import CourseListing from "./features/user/courses/course_listing/CourseListing";
 import AuthLayout from "./features/auth/authlayout";
 
-
-
-
 function App() {
   const authenticated = false;
   const user = { id:"sds", name: "ravi", role: "user" }
